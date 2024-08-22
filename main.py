@@ -27,6 +27,12 @@ with open(file1, 'r') as file:
 
 # Replaces text in original file
 
+# Naam agenda
+filedata = filedata.replace('NAME:Somtoday agenda', 'NAME:Somtoday Madelief')
+
+with open(file1, 'w') as file:
+  file.write(filedata)
+
 # Aardrijkskunde
 filedata = filedata.replace('oga3bak', 'Aardrijkskunde')
 
