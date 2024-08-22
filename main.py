@@ -3,7 +3,7 @@ import os
 import shutil
 
 # Give needed files simpler names
-file1 = '4fc988ad-6d4d-4c2a-aaf0-8207665bf69b.ics'
+file1 = 'c5490491-11eb-4aca-a8f1-ea3f58e75d54.ics'
 file2 = 'Final-File.ics'
 
 # Makes sure no duplicate files
@@ -18,7 +18,7 @@ else:
   print("The file does not exist")
 
 # Gets original file
-url = 'https://elo.somtoday.nl/services/webdav/calendarfeed/58405be0-5611-4aba-be66-9894a1009f12/4fc988ad-6d4d-4c2a-aaf0-8207665bf69b'
+url = 'https://api.somtoday.nl/rest/v1/icalendar/stream/58405be0-5611-4aba-be66-9894a1009f12/c5490491-11eb-4aca-a8f1-ea3f58e75d54'
 r = requests.get(url, allow_redirects=True)
 open(file1, 'wb').write(r.content)
 
