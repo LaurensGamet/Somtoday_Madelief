@@ -28,85 +28,85 @@ with open(file1, 'r') as file:
 # Replaces text in original file
 
 # Aardrijkskunde
-filedata = filedata.replace('oga3cak', 'Aardrijkskunde')
+filedata = filedata.replace('oga3bak', 'Aardrijkskunde')
 
 with open(file1, 'w') as file:
   file.write(filedata)
 
 # Begeleidingslessen
-filedata = filedata.replace('oga3cbl', 'Begeleidingslessen')
+filedata = filedata.replace('oga3bbl', 'Begeleidingslessen')
 
 with open(file1, 'w') as file:
   file.write(filedata)
 
 # Duits
-filedata = filedata.replace('oga3cdu', 'Duits')
+filedata = filedata.replace('oga3bdu', 'Duits')
 
 with open(file1, 'w') as file:
   file.write(filedata)
 
 # Economie
-filedata = filedata.replace('oga3cec', 'Economie')
+filedata = filedata.replace('oga3bec', 'Economie')
 
 with open(file1, 'w') as file:
   file.write(filedata)
 
 # Engels
-filedata = filedata.replace('oga3cen', 'Engels')
+filedata = filedata.replace('oga3ben', 'Engels')
 
 with open(file1, 'w') as file:
   file.write(filedata)
 
 # Frans
-filedata = filedata.replace('oga3cfa', 'Frans')
+filedata = filedata.replace('oga3bfa', 'Frans')
 
 with open(file1, 'w') as file:
   file.write(filedata)
 
 # Geschiedenis
-filedata = filedata.replace('oga3cgs', 'Geschiedenis')
+filedata = filedata.replace('oga3bgs', 'Geschiedenis')
 
 with open(file1, 'w') as file:
   file.write(filedata)
 
 # Lichamelijke Opvoeding
-filedata = filedata.replace('oga3clo', 'Lichamelijke Opvoeding')
+filedata = filedata.replace('oga3blo', 'Lichamelijke Opvoeding')
 
 with open(file1, 'w') as file:
   file.write(filedata)
 
 # Mentor
-filedata = filedata.replace('oga3cmentor', 'Mentor')
+filedata = filedata.replace('oga3bmentor', 'Mentor')
 
 with open(file1, 'w') as file:
   file.write(filedata)
 
 # Natuurkunde
-filedata = filedata.replace('oga3cna', 'Natuurkunde')
+filedata = filedata.replace('oga3bna', 'Natuurkunde')
 
 with open(file1, 'w') as file:
   file.write(filedata)
 
 # Nederlands
-filedata = filedata.replace('oga3cne', 'Nederlands')
+filedata = filedata.replace('oga3bne', 'Nederlands')
 
 with open(file1, 'w') as file:
   file.write(filedata)
 
 # Onderzoeken en Ontwerpen
-filedata = filedata.replace('oga3co&o', 'Onderzoeken en Ontwerpen')
+filedata = filedata.replace('oga3bo&o', 'Onderzoeken en Ontwerpen')
 
 with open(file1, 'w') as file:
   file.write(filedata)
 
 # Scheikunde
-filedata = filedata.replace('oga3csk', 'Scheikunde')
+filedata = filedata.replace('oga3bsk', 'Scheikunde')
 
 with open(file1, 'w') as file:
   file.write(filedata)
 
 # Wiskunde
-filedata = filedata.replace('oga3cwi', 'Wiskunde')
+filedata = filedata.replace('oga3bwi', 'Wiskunde')
 
 with open(file1, 'w') as file:
   file.write(filedata)
