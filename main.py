@@ -1,3 +1,4 @@
+
 import requests
 import os
 import shutil
@@ -82,7 +83,7 @@ with open(file1, 'w') as file:
   file.write(filedata)
 
 # Mentor
-filedata = filedata.replace('oga3bmentor', 'Mentor')
+filedata = filedata.replace('oga3.mentor2', 'Mentor')
 
 with open(file1, 'w') as file:
   file.write(filedata)
@@ -99,8 +100,8 @@ filedata = filedata.replace('oga3bne', 'Nederlands')
 with open(file1, 'w') as file:
   file.write(filedata)
 
-# Onderzoeken en Ontwerpen
-filedata = filedata.replace('oga3bo&o', 'Onderzoeken en Ontwerpen')
+# Taal, Maatschappij en Cultuur
+filedata = filedata.replace('oga3.tmc1, oh3.tmc1', 'TMC')
 
 with open(file1, 'w') as file:
   file.write(filedata)
