@@ -1,4 +1,3 @@
-
 import requests
 import os
 import shutil
@@ -101,7 +100,7 @@ with open(file1, 'w') as file:
   file.write(filedata)
 
 # Taal, Maatschappij en Cultuur
-filedata = filedata.replace('oga3.tmc1, oh3.tmc1', 'TMC')
+filedata = filedata.replace('oga3.tmc1\, oh3.tmc1', 'TMC')
 
 with open(file1, 'w') as file:
   file.write(filedata)
