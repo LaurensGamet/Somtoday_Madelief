@@ -773,6 +773,11 @@ filedata = filedata.replace("SUMMARY:tm116 - ", 'SUMMARY:')
 with open(file1, 'w') as file:
     file.write(filedata)
 
+filedata = filedata.replace("SUMMARY:tm116_binask - ", 'SUMMARY:')
+
+with open(file1, 'w') as file:
+    file.write(filedata)
+
 filedata = filedata.replace("SUMMARY:tm117 - ", 'SUMMARY:')
 
 with open(file1, 'w') as file:
