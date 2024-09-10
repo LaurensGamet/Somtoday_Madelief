@@ -45,6 +45,11 @@ filedata = filedata.replace('oga3bbl', 'Begeleidingslessen')
 with open(file1, 'w') as file:
   file.write(filedata)
 
+filedata = filedata.replace('oga.bl2', 'Begeleidingslessen')
+
+with open(file1, 'w') as file:
+  file.write(filedata)
+
 # Duits
 filedata = filedata.replace('oga3bdu', 'Duits')
 
