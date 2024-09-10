@@ -45,7 +45,7 @@ filedata = filedata.replace('oga3bbl', 'Begeleidingslessen')
 with open(file1, 'w') as file:
   file.write(filedata)
 
-filedata = filedata.replace('oga.bl2', 'Begeleidingslessen')
+filedata = filedata.replace('oga3.bl2', 'Begeleidingslessen')
 
 with open(file1, 'w') as file:
   file.write(filedata)
