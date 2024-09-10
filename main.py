@@ -105,6 +105,11 @@ filedata = filedata.replace('oga3.tmc1\, oh3.tmc1', 'TMC')
 with open(file1, 'w') as file:
   file.write(filedata)
 
+filedata = filedata.replace('ogh3.tmc1\, oga3.tmc1', 'TMC')
+
+with open(file1, 'w') as file:
+  file.write(filedata)
+
 # Scheikunde
 filedata = filedata.replace('oga3bsk', 'Scheikunde')
 
