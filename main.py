@@ -1057,7 +1057,7 @@ with open(file2, 'w') as file:
 
 # Delete temporary file
 
-if os.path.exists(file1):
-  os.remove(file1)
-else:
-  print("The file does not exist")
+#if os.path.exists(file1):
+#  os.remove(file1)
+#else:
+#  print("The file does not exist")
