@@ -200,6 +200,11 @@ with open(file2, 'w') as file:
   file.write(filedata)
 
 # Lokalen
+filedata = filedata.replace("SUMMARY:beuk3_gym - ", 'SUMMARY:')
+
+with open(file2, 'w') as file:
+    file.write(filedata)
+
 filedata = filedata.replace("SUMMARY:be001 - ", 'SUMMARY:')
 
 with open(file2, 'w') as file:
