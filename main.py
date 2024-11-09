@@ -1035,6 +1035,11 @@ filedata = filedata.replace("SUMMARY:tm221 - ", 'SUMMARY:')
 with open(file2, 'w') as file:
     file.write(filedata)
 
+filedata = filedata.replace("SUMMARY:tm222 - ", 'SUMMARY:')
+
+with open(file2, 'w') as file:
+    file.write(filedata)
+
 filedata = filedata.replace("SUMMARY:tm223 - ", 'SUMMARY:')
 
 with open(file2, 'w') as file:
