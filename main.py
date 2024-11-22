@@ -5,17 +5,11 @@ import shutil
 # Give simpler names
 file1 = 'c5490491-11eb-4aca-a8f1-ea3f58e75d54.ics'
 file2 = 'Final-File.ics'
-file3 = 'out.py'
 klas = 'oga3b'
 
 # Makes sure no duplicate files
 if os.path.exists(file2):
   os.remove(file2)
-else:
-  print("The file does not exist")
-
-if os.path.exists(file3):
-  os.remove(file3)
 else:
   print("The file does not exist")
 
@@ -29,10 +23,6 @@ with open(file1, 'r') as file:
 
 # Makes Final-File.ics from original
 shutil.copyfile(file1, file2)
-
-# Makes out.py to get rid of error
-with open('out.py', 'w') as fp:
-    pass
 
 # Replaces text in original file
 
@@ -70,7 +60,7 @@ with open(file2, 'r') as file:
   filedata = file.read()
 
 # Naam agenda
-filedata = filedata.replace('NAME:Somtoday agenda', 'NAME:Somtoday Laurens')
+filedata = filedata.replace('NAME:Somtoday agenda', 'NAME:Somtoday Madelief)
 
 with open(file2, 'w') as file:
   file.write(filedata)
