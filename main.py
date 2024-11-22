@@ -41,7 +41,7 @@ def remove_events_with_summary(input_file, output_file, keyword):
             if i + 10 < len(lines):
                 # Check if the fourth line in the block contains the keyword
                 if f"SUMMARY:{keyword}" in lines[i + 4]:
-                    print(f"Deleting VEVENT block starting at line {i}")  # Debugging
+                    #print(f"Deleting VEVENT block starting at line {i}")  # Debugging
                     # Skip the 11 lines of this VEVENT block
                     i += 12
                     continue  # Skip appending these lines to the result
