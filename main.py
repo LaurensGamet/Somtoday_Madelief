@@ -37,63 +37,40 @@ with open('out.py', 'w') as fp:
 # Replaces text in original file
 
 # Studiedag
-def delete_line(file_name, line_numbers):
-    # Read all lines from the file
-    with open(file_name, 'r') as file:
+def remove_events_with_summary(input_file, output_file, keyword):
+    with open(input_file, 'r') as file:
         lines = file.readlines()
-    
-    # Deleting lines in reverse order to prevent index shifting
-    for line_number in sorted(line_numbers, reverse=True):
-        if 0 <= line_number < len(lines):  # Ensure the line number is valid
-#            print(f"Deleting line {line_number}: {lines[line_number].strip()}")  # Debugging print
-            del lines[line_number]
-        else:
-            print(f"Line number {line_number} is out of range")  # Handle invalid line numbers
-    
-#    # Debugging: Print the remaining lines to be written back
-#    for line in lines:
-#       print(line.strip())
-    
-    # Write the remaining lines back to the file
-    with open(file_name, 'w') as file:
-        file.writelines(lines)
-        file.flush()
 
-with open(file1) as file:
-    with open('out.py', 'w') as f:
-        print("lijntjes = [", file=f)
-    
-    for number, line in enumerate(file):
-        if 'studiedag' in line:
-            with open('out.py', 'a') as f:
-                print(f"{number - 4},", file=f)
-                print(f"{number - 3},", file=f)
-                print(f"{number - 2},", file=f)
-                print(f"{number - 1},", file=f)
-                print(f"{number},", file=f)
-                print(f"{number + 1},", file=f)
-                print(f"{number + 2},", file=f)
-                print(f"{number + 3},", file=f)
-                print(f"{number + 4},", file=f)
-                print(f"{number + 5},", file=f)
-                print(f"{number + 6},", file=f)
-                print(f"{number + 7},", file=f)
-    
-    with open('out.py', 'a') as f:
-        print("]", file=f)
+    result_lines = []  # List to store lines to keep
+    i = 0  # Line index
 
-# Import the lines that need to be deleted
-from out import lijntjes
+    while i < len(lines):
+        # Check if a VEVENT block starts
+        if lines[i].strip() == "BEGIN:VEVENT":
+            # Check if the block is at least 11 lines long
+            if i + 10 < len(lines):
+                # Check if the fourth line in the block contains the keyword
+                if f"SUMMARY:{keyword}" in lines[i + 4]:
+                    print(f"Deleting VEVENT block starting at line {i}")  # Debugging
+                    # Skip the 11 lines of this VEVENT block
+                    i += 12
+                    continue  # Skip appending these lines to the result
+            # If the block is too short, just append it (avoid breaking the structure)
+        result_lines.append(lines[i])
+        i += 1
 
-# Deleting lines
-file_name = file2  # Ensure this is a string path to the final file
-delete_line(file_name, lijntjes)
+    # Write the remaining lines to the output file
+    with open(output_file, 'w') as file:
+        file.writelines(result_lines)
+
+# Test the function
+remove_events_with_summary(file1, file2, 'studiedag')
 
 with open(file2, 'r') as file:
   filedata = file.read()
 
 # Naam agenda
-filedata = filedata.replace('NAME:Somtoday agenda', 'NAME:Somtoday Madelief')
+filedata = filedata.replace('NAME:Somtoday agenda', 'NAME:Somtoday Laurens')
 
 with open(file2, 'w') as file:
   file.write(filedata)
