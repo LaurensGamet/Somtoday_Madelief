@@ -82,9 +82,11 @@ subject_replacements = {
     f'{klas}sk': 'Scheikunde',
     f'{klas}wi': 'Wiskunde',
     f'oga3.tmc1, oh3.tmc1': 'TMC',
+    f'oga3.tmc1\, oh3.tmc1' : 'TMC',
     f'oh3.tmc1, oga3.tmc1': 'TMC',
     f'oh3.tmc1\, oga3.tmc1' : 'TMC',
-    f'oga3.bl2' : 'Begeleidingslessen'
+    f'oga3.bl2' : 'Begeleidingslessen',
+    f'oga3.mentor2' : 'Mentor',
 }
 
 # Perform all replacements
