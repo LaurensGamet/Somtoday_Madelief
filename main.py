@@ -55,6 +55,7 @@ def remove_events_with_summary(input_file, output_file, keyword):
 
 # Test the function
 remove_events_with_summary(file1, file2, 'studiedag')
+remove_events_with_summary(file1, file2, 'Kerstactiviteit')
 
 with open(file2, 'r') as file:
   filedata = file.read()
