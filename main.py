@@ -40,10 +40,12 @@ def remove_events_with_summary(input_file, output_file, keyword):
             # Check if the block is at least 11 lines long
             if i + 10 < len(lines):
                 # Check if the fourth line in the block contains the keyword
-                if f"SUMMARY:{keyword}".lower() in lines[i + 4].strip().lower():
+                if f"SUMMARY:{keyword}" in lines[i + 4]:
+                    #print(f"Deleting VEVENT block starting at line {i}")  # Debugging
                     # Skip the 11 lines of this VEVENT block
                     i += 12
                     continue  # Skip appending these lines to the result
+            # If the block is too short, just append it (avoid breaking the structure)
         result_lines.append(lines[i])
         i += 1
 
@@ -52,9 +54,7 @@ def remove_events_with_summary(input_file, output_file, keyword):
         file.writelines(result_lines)
 
 # Test the function
-remove_events_with_summary(file1, file2, 'studiedag')
-remove_events_with_summary(file1, file2, 'Kerstactiviteit')
-
+remove_events_with_summary(file1, file2, 'Studiedag')
 
 with open(file2, 'r') as file:
   filedata = file.read()
@@ -123,7 +123,9 @@ specific_replacements = [
     "SUMMARY:tm146_o&o - ",
     "SUMMARY:cb012_gym - ",
     "SUMMARY:tm116_binask\, tm115_binask - ",
-    "SUMMARY:tm034\, tm035 - "
+    "SUMMARY:tm034\, tm035 - ",
+    "SUMMARY:tm208\, tm214\, tm137\, tm215 -",
+    "SUMMARY:tm208\, tm137\, tm214\, tm215 -",
 ]
 
 # Perform specific replacements
