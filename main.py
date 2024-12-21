@@ -117,6 +117,7 @@ for prefix, (start, end) in ranges.items():
 specific_replacements = [
     "SUMMARY:beuk3_gym - ",
     "SUMMARY:tm047_gym - ",
+    "SUMMARY:tm046_gym - ",
     "SUMMARY:tm116_binask - ",
     "SUMMARY:tm128_tmc - ",
     "SUMMARY:tm145_o&o - ",
