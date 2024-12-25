@@ -87,6 +87,16 @@ subject_replacements = {
     f'oh3.tmc1\, oga3.tmc1' : 'TMC',
     f'oga3.bl2' : 'Begeleidingslessen',
     f'oga3.mentor2' : 'Mentor',
+    f'Les - en' : 'Engels',
+    f'Les - wi' : 'Wiskunde',
+    f'Les - fa' : 'Frans',
+    f'Les - ne' : 'Nederlands',
+    f'Les - ec' : 'Economie',
+    f'Les - sk' : 'Scheikunde',
+    f'Les - na' : 'Natuurkunde',
+    f'Les - gs' : 'Geschiedenis',
+    f'Les - du' : 'Duits',
+    f'Les - ak' : 'Aardrijkskunde',
 }
 
 # Perform all replacements
